@@ -67,7 +67,7 @@ npm install
 
 ```bash
 cd scripts
-node get-gotchi.js 9638
+node get-gotchi.js 9638  # aaigotchi
 ```
 
 **Output:**
@@ -163,10 +163,10 @@ Each trait shows both base and modified (with wearables) values.
 ### Architecture
 
 ```
-ID lookup (9638)
+ID lookup (#9638 - aaigotchi)
   └─> Direct on-chain query (instant)
 
-Name lookup ("aaigotchi")  
+Name lookup ("aaigotchi" - #9638)  
   ├─> Try subgraph (instant, if available)
   └─> Fall back to on-chain scan (30-60s)
 ```
@@ -195,8 +195,8 @@ Can be overridden via code modification if needed.
 
 ```bash
 node get-gotchi.js 23795    # Slide
-node get-gotchi.js 7765     # Test gotchi
-node get-gotchi.js 14140    # Test gotchi
+node get-gotchi.js 7765     # @egornomic
+node get-gotchi.js 14140    # ChamallowGotchi
 ```
 
 ## 🔮 Future Enhancements

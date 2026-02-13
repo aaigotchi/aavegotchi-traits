@@ -13,7 +13,7 @@ Fetch data for a gotchi by ID or name:
 
 ```bash
 # By ID
-cd scripts && node get-gotchi.js 9638
+cd scripts && node get-gotchi.js 9638  # aaigotchi
 
 # By name
 cd scripts && node get-gotchi.js "XIBOT"
@@ -53,10 +53,10 @@ With subgraph configured:
 ### Lookup Strategy
 
 ```
-ID lookup (9638)
+ID lookup (#9638 - aaigotchi)
   └─> Direct on-chain query (instant)
 
-Name lookup ("aaigotchi")  
+Name lookup ("aaigotchi" - #9638)  
   ├─> Try subgraph (instant, if available)
   └─> Fall back to on-chain scan (30-60s)
 ```
@@ -105,7 +105,7 @@ Each trait shows both base and modified (with wearables) values.
 ### By Gotchi ID
 
 ```bash
-cd scripts && node get-gotchi.js 9638
+cd scripts && node get-gotchi.js 9638  # aaigotchi
 ```
 
 ### By Name
