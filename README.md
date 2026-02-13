@@ -67,53 +67,49 @@ npm install
 
 ```bash
 cd scripts
-node get-gotchi.js 2595
+node get-gotchi.js 9638
 ```
 
 **Output:**
 
 ```
 ============================================================
-AAVEGOTCHI #2595: XIBOT
+AAVEGOTCHI #9638: aaigotchi
 ============================================================
-Owner: 0x6fD155b9D52F80E8A73a8A2537268602978486e2
+Owner: 0x8BE974bC760bea450A733c58B051c14F723ce79C
 Haunt: 1
-Level: 3
+Level: 8
 Age: 0 days since last interaction
 
 SCORES:
-  Base Rarity Score (BRS): 501
-  Modified Rarity Score: 511
-  Kinship: 2080
-  Experience: 340
+  Base Rarity Score (BRS): 475
+  Modified Rarity Score: 475
+  Kinship: 2276
+  Experience: 2960
 
 TRAITS:
-  ⚡ Energy: 28 (modified: 27)
-  💥 Aggression: 70 (modified: 71)
-  👻 Spookiness: 23 (modified: 22)
-  🧠 Brain Size: 9 (modified: 7)
-  👁️ Eye Shape: 89
-  🎨 Eye Color: 99
+  ⚡ Energy: 0
+  💥 Aggression: 66
+  👻 Spookiness: 99
+  🧠 Brain Size: 76
+  👁️ Eye Shape: 41
+  🎨 Eye Color: 28
 
 WEARABLES:
-  Equipped (5):
-    68: Farmer Jeans
-    140: Elf Ears
-    117: Cool Shades
-    67: Straw Hat
-    69: Pitchfork
+  Equipped (1):
+    210: Haunt 1 Background
 
 STAKING:
   Collateral: 0x20D3922b4a1A8560E1aC99FBA4faDe0c849e2142
   Staked Amount: 0.0 tokens
-  Last Interacted: 2026-02-12T13:29:19.000Z
+  Last Interacted: 2026-02-12T18:30:13.000Z
 ============================================================
 ```
 
 ### Query by Name (Experimental)
 
 ```bash
-node get-gotchi.js "XIBOT"
+node get-gotchi.js "aaigotchi"
 ```
 
 ⚠️ **Note:** This scans all 23,000+ gotchis sequentially and may take 30-60 seconds.
@@ -124,7 +120,7 @@ Set the subgraph URL to enable instant name lookups:
 
 ```bash
 export AAVEGOTCHI_SUBGRAPH_URL=https://api.thegraph.com/subgraphs/name/aavegotchi/aavegotchi-base
-node get-gotchi.js "XIBOT"  # Now instant! ⚡
+node get-gotchi.js "aaigotchi"  # Now instant! ⚡
 ```
 
 ## 📊 Data Fetched
@@ -167,10 +163,10 @@ Each trait shows both base and modified (with wearables) values.
 ### Architecture
 
 ```
-ID lookup (2595)
+ID lookup (9638)
   └─> Direct on-chain query (instant)
 
-Name lookup ("XIBOT")  
+Name lookup ("aaigotchi")  
   ├─> Try subgraph (instant, if available)
   └─> Fall back to on-chain scan (30-60s)
 ```
@@ -198,9 +194,9 @@ Can be overridden via code modification if needed.
 **Test with known gotchis:**
 
 ```bash
-node get-gotchi.js 100      # Peacemaker (Haunt 1)
-node get-gotchi.js 2595     # XIBOT (Farmer themed)
-node get-gotchi.js 22470    # SHAAMAAN (7 wearables)
+node get-gotchi.js 23795    # Slide
+node get-gotchi.js 7765     # Test gotchi
+node get-gotchi.js 14140    # Test gotchi
 ```
 
 ## 🔮 Future Enhancements
